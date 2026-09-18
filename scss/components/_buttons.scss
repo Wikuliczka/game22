@@ -1,0 +1,32 @@
+ .button {
+    display: block;
+
+    padding: $spacing-md $spacing-lg;
+
+    color: $color-white;
+    background: $color-primary;
+
+    border: none;
+    border-radius: $radius-button;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    &:hover {
+        background: $color-primary-dark;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+    &:focus-visible {
+        outline: 3px solid $color-primary;
+        outline-offset: 3px;
+    }
+}
+ 

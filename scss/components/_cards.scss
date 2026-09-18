@@ -1,0 +1,145 @@
+.pricing {
+    min-height: 100vh;
+    padding: $spacing-xl;
+
+    background: $color-background;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: $spacing-xl;
+
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+.price-card {
+    position: relative;
+
+    width: 320px;
+    padding: $spacing-xl;
+
+    background: $color-starter;
+
+    border: 2px solid $color-border;
+    border-radius: $radius-card;
+
+    box-shadow: $shadow-card;
+
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-hover;
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+        outline: 3px solid $color-primary;
+        outline-offset: 4px;
+    }
+
+    &__badge {
+        position: absolute;
+        top: -14px;
+        right: 24px;
+
+        padding: $spacing-xs $spacing-md;
+
+        color: $color-white;
+        background: $color-primary;
+
+        border-radius: $radius-badge;
+
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__title {
+        margin-bottom: $spacing-md;
+
+        color: $color-text;
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &__price {
+        margin-bottom: $spacing-lg;
+
+        color: $color-primary;
+
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    &__list {
+        margin-bottom: $spacing-xl;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__item {
+        margin-bottom: $spacing-sm;
+
+        color: $color-text-light;
+        font-size: 16px;
+    }
+
+    &__button {
+        display: block;
+        width: 100%;
+
+        padding: $spacing-md;
+
+        color: $color-white;
+        background: $color-primary;
+
+        border: none;
+        border-radius: $radius-button;
+
+        font-size: 16px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: 0.3s ease;
+
+        &:hover {
+            background: $color-primary-dark;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+        &:focus-visible {
+            outline: 3px solid $color-primary;
+            outline-offset: 3px;
+        }
+    }
+
+    &--pro {
+        background: $color-pro;
+
+        border-color: $color-primary;
+
+        transform: scale(1.03);
+
+        .price-card__button {
+            background: $color-primary-dark;
+        }
+    }
+
+    &--legendary {
+        background: $color-legendary;
+
+        border-color: #ff9fc5;
+    }
+}
